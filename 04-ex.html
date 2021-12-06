@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function randomValueInTable(array) {
+        let result = null;
+        if (
+          !Array.isArray(array) ||
+          (Array.isArray(array) && array.length <= 0)
+        ) {
+          result = "erreur, parameter's type is non valid";
+          return result;
+        } else {
+          result = array[Math.floor(Math.random() * array.length)];
+          return result;
+        }
+      }
+      console.log(randomValueInTable(["a", "b", "c", "d"]));
+      console.log(randomValueInTable([]));
+      console.log(randomValueInTable(""));
+    </script>
+  </body>
+</html>

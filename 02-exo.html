@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkCharinList(string, char) {
+        let counter = 0;
+        for (let i = 0; i < string.length; i++) {
+          if (char.toLowerCase() === string[i].toLowerCase()) {
+            counter += 1;
+          }
+        }
+        return counter;
+      }
+
+      console.log(checkCharinList("bonjour", "o"));
+      console.log(checkCharinList("bonjour", "O"));
+      console.log(checkCharinList("hello les amis", "o"));
+      console.log(checkCharinList("hello les amis", "z"));
+    </script>
+  </body>
+</html>
